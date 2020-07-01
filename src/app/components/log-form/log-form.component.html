@@ -1,9 +1,22 @@
 <div class="card card-body mb-3">
   <form action="">
     <div class="form-group">
-      <input type="text" class="form-contorl" placeholder="Add a log..." />
+      <input
+        type="text"
+        name="text"
+        [(ngModel)]="text"
+        class="form-control"
+        placeholder="Add a log..."
+      />
     </div>
-    <input type="submit" value="add log" class="btn btn-light" />
-    <button type="button" class="bnt btn-warning">Clear</button>
+    <input
+      [disabled]="!this.text"
+      type="submit"
+      value="add log"
+      class="btn btn-light"
+    />
+    <button [hidden]="!this.text" type="button" class="btn btn-warning">
+      Clear
+    </button>
   </form>
 </div>
