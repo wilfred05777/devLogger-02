@@ -13,6 +13,8 @@ export class LogFormComponent implements OnInit {
   text: string;
   date: any;
 
+  isNew: boolean = true;
+
   constructor(private logService: LogService) {}
 
   ngOnInit(): void {
@@ -25,5 +27,8 @@ export class LogFormComponent implements OnInit {
         this.date = log.date;
       }
     });
+  }
+  onSubmit() {
+    console.log(123);
   }
 }
