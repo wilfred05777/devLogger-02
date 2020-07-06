@@ -15,7 +15,12 @@
       value="add log"
       class="btn btn-light"
     />
-    <button [hidden]="!this.text" type="button" class="btn btn-warning">
+    <button
+      (click)="clearState()"
+      [hidden]="!this.text"
+      type="button"
+      class="btn btn-warning"
+    >
       Clear
     </button>
   </form>
